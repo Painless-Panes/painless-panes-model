@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "painless-panes"
+name = "painless-panes-model"
 version = "0.1.0"
 description = ""
 authors = ["Andreas Copan <avcopan@gmail.com>"]
@@ -28,10 +28,6 @@ onnxsim = "^0.4.33"
 tflite-support = "^0.4.4"
 onnxruntime = "^1.16.0"
 tensorflowjs = "^4.11.0"
-flask = "^2.3.3"
-python-dotenv = "^1.0.0"
-gunicorn = "^21.2.0"
-flask-cors = "^4.0.0"
 
 
 [[tool.poetry.source]]

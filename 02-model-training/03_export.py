@@ -2,4 +2,4 @@ from ultralytics import YOLO
 
 model = YOLO("custom-model.pt")
 
-model.export(format="tfjs")
+model.export(format="onnx")
