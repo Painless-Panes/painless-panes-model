@@ -22,6 +22,8 @@ window_corners = painless_panes.cv.find_window_corners(image, bbox, annotate=Tru
 def get_perspective_transform_matrix(corners):
     """Get the perspective transform from the corners of a rectangular object
 
+    source: https://stackoverflow.com/q/38285229
+
     :param corners: _description_
     :type corners: _type_
     """
@@ -107,6 +109,17 @@ def get_perspective_transform_matrix(corners):
 
 
 def get_transformed_image(mat, img):
+    """_summary_
+
+    source: https://stackoverflow.com/a/64608248
+
+    :param mat: _description_
+    :type mat: _type_
+    :param img: _description_
+    :type img: _type_
+    :return: _description_
+    :rtype: _type_
+    """
     height, width, _ = img.shape
 
     # calculate the tranformation
