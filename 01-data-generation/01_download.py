@@ -1,3 +1,5 @@
+"""Download Google images for training
+"""
 import base64
 import hashlib
 
@@ -35,9 +37,9 @@ google_crawler = GoogleImageCrawler(
     downloader_threads=4,
     storage={"root_dir": "images"},
 )
-# google_crawler.crawl(keyword="window", max_num=50, min_size=(1000, 1000))
-# google_crawler.crawl(keyword="window picture", max_num=50, min_size=(1000, 1000))
-# google_crawler.crawl(keyword="window photo", max_num=50, min_size=(1000, 1000))
+google_crawler.crawl(keyword="window", max_num=50, min_size=(1000, 1000))
+google_crawler.crawl(keyword="window picture", max_num=50, min_size=(1000, 1000))
+google_crawler.crawl(keyword="window photo", max_num=50, min_size=(1000, 1000))
 # google_crawler.crawl(keyword="window shutters", max_num=50, min_size=(1000, 1000))
 # google_crawler.crawl(keyword="window curtains", max_num=50, min_size=(1000, 1000))
 # google_crawler.crawl(keyword="awning window", max_num=50, min_size=(1000, 1000))
@@ -46,4 +48,3 @@ google_crawler = GoogleImageCrawler(
 # google_crawler.crawl(keyword="double hung window", max_num=50, min_size=(1000, 1000))
 # google_crawler.crawl(keyword="egress window", max_num=50, min_size=(1000, 1000))
 # google_crawler.crawl(keyword="fixed window", max_num=50, min_size=(1000, 1000))
-google_crawler.crawl(keyword="blank paper", max_num=50)

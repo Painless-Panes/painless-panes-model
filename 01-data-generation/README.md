@@ -1,6 +1,9 @@
-#### 1. Download images
+#### 1. Get images
 
-Run the image download scrip:
+Create an `images/` directory where you will initially put images for training.
+
+Then, either add your own images or modify the search keywords in the download
+script (`01_download.py`) and run it:
 ```
 python 01_download.py
 ```
