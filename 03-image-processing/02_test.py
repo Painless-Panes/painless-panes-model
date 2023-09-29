@@ -18,7 +18,7 @@ bbox = window["bounding_box"]
 window_corners = painless_panes.cv.find_window_corners(image, bbox, annotate=True)
 
 # project the image with the new w/h
-trans, width, height = painless_panes.cv.get_perspective_transformation_from_rectangle(
+trans, width, height = painless_panes.cv.align_image_perspective_on_rectangle(
     image, window_corners
 )
 

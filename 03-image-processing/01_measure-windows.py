@@ -2,29 +2,15 @@ import cv2
 import numpy
 import painless_panes
 
-image = cv2.imread("example3.jpg")
-height, width, channels = image.shape
+image = cv2.imread("example1.jpg")
+height, width, _ = image.shape
 
 width = int(width * 800 / height)
-height = int(height * 800 / height)
+height = 800
+image = cv2.resize(image, (width, height))
 
-image = cv2.resize(image, (width, height), interpolation=cv2.INTER_LINEAR)
-windows = painless_panes.model.get_detections(image)
-window = painless_panes.cv.select_central_detection(image, windows)
-bbox = window["bounding_box"]
+wwidth, wheight, image_out, message = painless_panes.cv.measure_window(image, annotate=True)
 
-window_corners = painless_panes.cv.find_window_corners(image, bbox, annotate=True)
-
-# # Find the contours of the edges
-# contours, hierarchy = cv2.findContours(edges, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
-
-# # Approximate each contour to a polygon
-# for contour in contours:
-#     perimeter = cv2.arcLength(contour, True)
-#     polygon = cv2.approxPolyDP(contour, 0.02 * perimeter, True)
-#     if len(polygon) == 4:
-#       cv2.drawContours(image, [polygon], -1, (0, 255, 0), 2)
-
-cv2.imshow("1", image)
+cv2.imshow("1", image_out)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
