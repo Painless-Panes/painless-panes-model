@@ -1,5 +1,5 @@
-train: /home/avcopan/Documents/Code/prime/painless-panes-cv/02-model-training/train
-val: /home/avcopan/Documents/Code/prime/painless-panes-cv/02-model-training/val
+train: /home/avcopan/Documents/Code/prime/group-project/painless-panes-model/02-model-training/train
+val: /home/avcopan/Documents/Code/prime/group-project/painless-panes-model/02-model-training/val
 
 nc: 3
 

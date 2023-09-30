@@ -1,10 +1,9 @@
 from ultralytics import YOLO
 
-model = YOLO("custom-model.pt")
+model = YOLO("window-model-nano-v1.pt")
 
-filename = "example3"
 results = model(
-    f"test/{filename}.jpg",
+    f"val/images/D_c_31.75x45.jpeg",
     show=True,
     conf=0.25,
     save=True,
