@@ -29,11 +29,31 @@ Run the training script:
 python 01_train.py
 ```
 
+If you are improving an existing model after adding training data, you will need to update the following line in the script:
+```
+model = YOLO(<insert previous model file path>)
+```
+
+If the training process is interrupted for some reason, it can be restarted using the restart script:
+```
+python 02_restart.py
+```
+
 #### 2. Test the model
 
 The model weights are stored in `runs/train/weights/best.pt`. Copy that file into this directory and rename it `custom-model.pt`.
 
 You can then test the model by running the prediction script:
 ```
-python 02_predict.py
+python 03_predict.py
+```
+
+#### 3. Export the model
+
+For deployment, it can be useful to export the model to the ONNX format, since
+ONNX Runtime is a much smaller package than PyTorch/Ultralytics.
+
+This can be done with the export script:
+```
+python 03_export.py
 ```

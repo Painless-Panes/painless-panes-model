@@ -1,5 +1,6 @@
 from ultralytics import YOLO
 
-model = YOLO("custom-model.pt")
+model = YOLO("window-model-nano-v2.pt")
 
 model.export(format="onnx")
+
