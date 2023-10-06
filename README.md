@@ -1,4 +1,4 @@
-# Computer Vision Scripts for the Painless Panes Project
+# Scripts for Training the Painless Panes Window Detection Model
 
 If you haven't already, set up the Python environment before getting started following the instructions below.
 Once that is done, you can simply activate the Python environment using
